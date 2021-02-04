@@ -2,7 +2,7 @@
 
 ---
 
-Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithmm. The operations are powered by NumPy. 
+Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithm. The operations are powered by NumPy. 
 
 ## Example 1: Experimental Geophysics Modeling
 
@@ -43,7 +43,7 @@ A lwMCMC object has the following functions:
 
 * mcmc.get_samples() returns the sampled theta values in 2d numpy array.
 * mcmc.plot_hist() plots a histogram of the sample values for each
-            paramter.  As the chain runs for more steps, this should get
+            parameter.  As the chain runs for more steps, this should get
             smoother.
         
 * mcmc.plot_samples() plots the sample values over the course of the 
@@ -51,4 +51,4 @@ A lwMCMC object has the following functions:
             feature at the start of these plots.
     
 * mcmc.calculate_mean() returns mean of all samples for each parameter.
-* mcmc.calculate_cov() returns the covariance matrix of the paramters.
+* mcmc.calculate_cov() returns the covariance matrix of the parameters.

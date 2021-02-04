@@ -1,3 +1,6 @@
 numpy
 corner
 matplotlib
+pandas
+seaborn
+scipy

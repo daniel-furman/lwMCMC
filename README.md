@@ -6,7 +6,7 @@ trivial metropolis hastings algorithm.
 
 ---
 
-## Example Results
+## Example Results: Particle Modeling with Priors
 
 We visualize the recovered parameter constraints on a gridIn the application of lwMCMC to a simulated particle decay model,
 <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}"> with 

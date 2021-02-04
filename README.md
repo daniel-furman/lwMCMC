@@ -6,17 +6,17 @@ Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with t
 
 ## Example 1: Experimental Geophysics Modeling
 
-Posteriors for modeling parameters with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | Ice flow rate model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior on the power law exponent
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | MCMC fit with a prior on the power law exponent
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corners.png) | ![](examples/data/icescatter.png)
 
-* Recovered parameter constraints for power law flow model R(stress) = densification_rate = intercept + slope * stress in log-log space, and <img src="https://render.githubusercontent.com/render/math?math=\R = e^{b0}*\sigma^{b1}">. In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the one and two sigma error contours. We include a prior on the power law exponent <img src="https://render.githubusercontent.com/render/math?math=\n"> from the ice creep literature, and find that that the parameter shifts from 1.53 +- 0.31 without to 1.70 +- 0.17 with the prior. 
+* Recovered parameter constraints for power law flow model R(stress) = densification_rate = intercept + slope * stress in log-log space, and <img src="https://render.githubusercontent.com/render/math?math=\R = exp(b0)*\sigma^{b1}">. In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the one and two sigma error contours. We include a prior on the power law exponent (b1) from the ice creep literature to reveal b1 = 1.70 +- 0.17.
 
 ## Example 2: Simulation of Particle Decay
 
 ---
 
-Posteriors for modeling parameters with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior on the decay rate param 
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior on the decay rate param 
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/gridsims.png) | ![](examples/data/sims.png)
 

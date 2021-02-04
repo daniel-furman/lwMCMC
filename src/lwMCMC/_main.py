@@ -52,7 +52,6 @@ class lwMCMC(object):
         self.names = names            
 
     def step(self, save=True):
-        """See appendix for logic and math"""
         new_theta = self.theta + self.step_size * self.rng.normal(
             size=len(self.step_size))
         new_loglike = self.log_likelihood(self.data, new_theta)

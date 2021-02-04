@@ -1,7 +1,12 @@
 language: python
 python:
   - "3.6"
+before_install:
+  - python --version
+  - pip install -U pip
+  - pip install -U pytest
+  - pip install codecov
 install:
+  - pip install .
   - pip install -r requirements.txt
-script:
-  - python tests/unit_tests.py
+script: pytest # run tests

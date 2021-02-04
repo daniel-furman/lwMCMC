@@ -9,3 +9,6 @@ install:
 - pip install -r requirements.txt
 script: pytest
 after_script: cd ~
+deploy:
+  provider: pypi
+  user: "daniel-furman"

@@ -1,6 +1,15 @@
-A python class for parameter search with MCMC chains using Metropolis Hastings.
+Multi-dimensional model parameter spaces are commonly sampled using Markov Chain Monte Carlo (MCMC).
+Here, we implement am object-oriented implementation of MCMC based on the
+trivial metropolis hastings algorithm, denoted as `lwMCMC` given its lightweight nature. 
 
-With the MCMC object, run the following functions:
+In the application of lwMCMC to a simulated particle decay model, we  
+visualize the recovered parameter constraints on a grid:
+
+where, the diagonal shows the 1-dimensional posteriors and the lower-left half
+shows the pairwise projections.
+
+
+A lwMCMC object has the following functions:
         
 * mcmc.step() takes a single step of the chain.
 

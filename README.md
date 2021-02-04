@@ -18,8 +18,6 @@ Recovered parameter constraints for a particle decay simulation:
 decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">. In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the
 one and two sigma error contours. 
 
-
-
 ## Class Functions 
 
 ---

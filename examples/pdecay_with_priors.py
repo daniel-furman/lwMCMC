@@ -70,9 +70,13 @@ def plot_data_with_model(data, theta):
     parametrized by theta.
     """
     t, r, sigma = data
-    plt.errorbar(t, r, sigma, fmt='o', ms=5)
+    plt.errorbar(t, r, sigma, fmt='o', ms=5, label='$Simulated$ $data$')
     model = decay_model(t, theta)
-    plt.plot(t, model)
+    plt.plot(t, model, label = '$MCMC$ $model$')
+    plt.xlabel('$time$ $(t)$', labelpad=15)
+    plt.ylabel('$Decay$ $rate$ $R(t)$', labelpad=15)
+    plt.legend()
+    #plt.savefig('data/mcmc-decay.png', dpi = 144)
     plt.show()
     
 # Check that the initial guess is in the right ballpark.

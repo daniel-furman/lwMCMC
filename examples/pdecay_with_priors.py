@@ -42,12 +42,10 @@ Use the MCMC class to sample the likelihood function
     $p(\mathcal{D}|\boldsymbol{\theta})$ and obtain the mean and variance of
     $\lambda$.  Starting at the above guess.
 
-Suppose via an independent method tof measurement that the
+Suppose via an independent method of measurement we know that the
     background of the instrument is $A = 24.38 \pm 0.44$.  Use this as a
     gaussian prior in your MCMC above to obtain the new posterior
     (mean and variance) for $\lambda$.
-
-Use corner to plot the chains from both parts (b) and (c). 
 
 """
 
@@ -64,7 +62,7 @@ def decay_start():
     This needs to be a bit better than for question 1,
     so try to have a reasonable guess.
     """
-    # Basically anything that kind of goes through the data points is fine.
+    # Anything that kind of goes through the data points is fine.
     return (30, 50, 1)
 
 def plot_data_with_model(data, theta):
@@ -218,7 +216,7 @@ plot_corner_decay_prior(decay_mcmc)
 
 
 # Double check that everything worked by looking at the best fit model with
-# the data after fitting with the prior
+# the data after fitting the prior on decay rate.
 mean[2] = mean1
 print(mean)
 plot_data_with_model(data, mean)

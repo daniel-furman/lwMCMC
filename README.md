@@ -2,7 +2,7 @@
 
 ---
 
-Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithm powered by NumPy. 
+Parameter space sampling: lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithm. Powered by NumPy. 
 
 ### Example 1: Experimental Geophysics Modeling with Laboratory Data
 

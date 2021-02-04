@@ -6,7 +6,7 @@ Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with t
 
 ## Example 1: Experimental Geophysics Modeling
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC model with slope prior from the literature
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC model with slope parameter prior
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
 

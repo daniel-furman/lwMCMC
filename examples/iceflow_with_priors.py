@@ -16,7 +16,7 @@ import seaborn as sns
 import corner
 from scipy import stats
 
-from lwMCMC.src.lwMCMC._main import lwMCMC as MCMC
+from lwMCMC.lwMCMC._main import lwMCMC as MCMC
 
 table = pd.read_csv('data/iceflow_rates.csv', delimiter=',',
                           header = 'infer')
@@ -32,9 +32,9 @@ The file iceflow_rates.csv contains laboratory data of a ice densification and
     We are going to sample for uncertainty below 'rate_uncertainty'.
 
     id  grain_radius  mean_pr  stress  densification_rate  rate_uncertainty
-     1      187       0.8097    0.7743     3.932e-09         dens_rate/3 
+     1      187       0.8097    0.7743     3.932e-09         dens_rate/3
      4        5       0.8310    0.7181     6.698e-08         dens_rate/3
-     
+
      (rate_uncertainites were experimentally determined from rough upper
      limit of measurement error)
     ...
@@ -49,7 +49,7 @@ linear slope
     $$
     densification_rate = intercept + slope * stress
     $$
-    slope os the n stress exponent in the power law:
+    slope is the n stress exponent in the power law:
 
     densification_rate = exp(intercept) * stress^slope
 
@@ -63,6 +63,13 @@ Use the MCMC class to sample the likelihood function and obtain the mean and
 
 Then use the above knowledge as gaussian priors in your MCMC to obtain the new
     posterior(mean and variance) for $\n$.
+
+I also intent to compare our MCMC class's trivial mh algorithm to at least
+    one other - sgld perhaps.
+
+Lastly, use these distributions as the priors on the final model, to sample
+    the distribution of the semi empirical param in the flow law.
+
 """
 
 # log-log linear regression of power law relationship for green series
@@ -122,17 +129,17 @@ def plot_data_with_model(data, theta):
     plt.legend()
     #plt.savefig('data/mcmc-decay.png', dpi = 144)
     plt.show()
-    
+
 # Check that the initial guess is in the right ballpark.
 data = np.array([table['stress'][10:15],
                  table['densification_rate'][10:15],
                  table['rate_uncertainty'][10:15]])
-plot_data_with_model(data, powerlaw_start())   
+plot_data_with_model(data, powerlaw_start())
 
 def powerlaw_loglike(data, theta):
     """Return the natural logarithm of the likelihood P(data | theta) for our
     model of the decay data.
-    
+
     data is expected to be a tuple of numpy arrays = (x, y, sigma)
     theta is expected to be an array of parameters = (intercept, slope)
     """
@@ -140,7 +147,7 @@ def powerlaw_loglike(data, theta):
     x, y, sigma = data
     n = len(x)
     model = powerlaw_model(x, theta)
-    lnlike = -0.5 * (n*np.log(2.*np.pi) + 
+    lnlike = -0.5 * (n*np.log(2.*np.pi) +
                      np.sum(2.*np.log(errs) + (y-model)**2 / sigma**2))
     return lnlike
 
@@ -177,7 +184,7 @@ powerlaw_mcmc.run(powerlaw_nsteps())
 print('After running for {} steps:'.format(powerlaw_nsteps()))
 powerlaw_mcmc.plot_samples()
 print('Acceptance rate is ', powerlaw_mcmc.accept_fraction())
-assert 0.3 < powerlaw_mcmc.accept_fraction() < 0.7 
+assert 0.3 < powerlaw_mcmc.accept_fraction() < 0.7
     #Adjust step sizes if this fails.
 
 print('Mean value of params = ', powerlaw_mcmc.calculate_mean())
@@ -208,30 +215,30 @@ for k in range(powerlaw_mcmc.nparams):
     theta_k = all_samples[:,k]
     sns.distplot(theta_k)
     plt.figure()
-    
+
 def calculate_prior_weights(mcmc):
     """Calculate appropriate weights for the mcmc samples, given the prior
     n = 1.8 +- 0.225.
- 
+
     Returns the weights as a numpy array.
     """
     samples = mcmc.get_samples()
     a_prior = 1.8
     sigma_prior = 0.225
     intercept, slope = samples.T
-    weight = np.exp(-0.5 * (slope-a_prior)**2/sigma_prior**2) 
+    weight = np.exp(-0.5 * (slope-a_prior)**2/sigma_prior**2)
     return weight
-    
+
 def calculate_slope_with_prior(mcmc):
-    """Calculate the mean and variance of lambda, given the prior on 
+    """Calculate the mean and variance of lambda, given the prior on
     n = 1.8 +- 0.225.
-    
+
     Returns (mean, variance) as a tuple.
     """
-    weight = calculate_prior_weights(mcmc)    
+    weight = calculate_prior_weights(mcmc)
     mean = mcmc.calculate_mean(weight)
     cov = mcmc.calculate_cov(weight)
-    
+
     return mean[1], cov[1,1]
 
 mean1, var = calculate_slope_with_prior(powerlaw_mcmc)
@@ -243,20 +250,20 @@ print('With the prior on A, the inferred decay rate is {:.2f} +- {:.2f}'.
 def plot_corner_powerlaw(mcmc):
     """Make a corner plot for the parameters of the decay model.
     Include contours at 68% and 95% confidence levels."""
-    
+
     samples = mcmc.get_samples()
     matplotlib.rc('font', size=16)
     levels=(0.68, 0.95)
     fig = corner.corner(samples, labels=mcmc.names, levels=levels, bins=50)
     fig.set_size_inches(10,10)
     plt.show()
-    
+
 def plot_corner_powerlaw_prior(mcmc):
     """Make a corner plot for the parameters of the decay model, this time
         with the prior on A."""
 
- 
-    weight = calculate_prior_weights(mcmc)    
+
+    weight = calculate_prior_weights(mcmc)
     samples = mcmc.get_samples()
     matplotlib.rc('font', size=16)
     levels=(0.68, 0.95)
@@ -264,7 +271,7 @@ def plot_corner_powerlaw_prior(mcmc):
                         weights=weight)
     fig.set_size_inches(10,10)
     plt.show()
-    
+
 plot_corner_powerlaw(powerlaw_mcmc)
 plot_corner_powerlaw_prior(powerlaw_mcmc)
 
@@ -296,6 +303,3 @@ ax1.set_xlabel('$Applied$ $stress$ $(log$ $\sigma)$', labelpad = 15)
 ax1.set_xlim([1e-1,5])
 ax1.set_ylim([5e-9,1e-6])
 ax1.legend(loc = 'lower right')
-
-
-    

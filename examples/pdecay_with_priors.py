@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 import corner
-from lwMCMC.src.lwMCMC._main import lwMCMC as MCMC
+from lwMCMC.lwMCMC._main import lwMCMC as MCMC
 
 """
 

@@ -6,7 +6,7 @@ Multi-dimensional model parameter space sampling with Markov Chain Monte Carlo (
 We implement a Python class with the trivial metropolis hastings algorithm.
 
 
-## Example: Particle Decay Modeling with Priors
+## Example: Particle Decay Modeling
 
 ---
 
@@ -21,7 +21,7 @@ one and two sigma error contours.
 
 
 
-## Available Class Functions 
+## Class Functions 
 
 ---
 

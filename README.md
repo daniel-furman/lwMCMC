@@ -18,7 +18,7 @@ Recovered parameter constraints for power law flow model for ice sheets (near-su
 
 ---
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma" contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior (simulated). 
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior (simulated). 
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/gridsims.png) | ![](examples/data/sims.png)
 

@@ -2,7 +2,7 @@
 
 ---
 
-Modeling space samples with lightweight Markov Chain Monte Carlo (MCMC). An object-oriented Python class with the trivial metropolis hastings algorithmm, powered by NumPy. 
+Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC). An object-oriented Python implementation with the trivial metropolis hastings algorithmm, powered by NumPy. 
 
 
 ## Example: Particle Decay Modeling

@@ -5,11 +5,11 @@
 Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithmm. The operations are powered by NumPy. 
 
 
-## Example 1: Simulation: Particle Decay Modeling
+## Example 1: Simulation of Particle Decay
 
 ---
 
-Posteriors with error contours at one and two <img src="https://render.githubusercontent.com/render/math?math=\sigma"> | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior distribution
+Posteriors for modeling parameters with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior on the decay rate param
 :-------------------------------------------:|:------------------------------:
 ![](examples/data/corners.png) | ![](examples/data/scatter.png)
 

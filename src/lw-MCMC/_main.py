@@ -7,66 +7,33 @@ Created on Thu Jan  7 08:29:05 2021
 """
 # CLASS: Metropolis Hastings Markov Chain Monte Carlo
 # Author: Daniel Furman <dryanfurman@gmail.com>
-# Last modified : 1/7/2021
+# Last modified : Feb. 3, 2021
 # MIT License
 
 import numpy as np
 import matplotlib.pyplot as plt
 
 class lwMCMC(object):
-    """Class that can run an MCMC chain using the Metropolis Hastings\
-        algorithm for parameter search
-
-    This class is based heavily on Trivial Metropolis Hastings * see appendix
-
-    You use it by creating an instance of the class as follows:
-
-        mcmc = MCMC(log_likelihood, data, theta, step_size)
-
-    The parameters here are:
-
-        log_likelihood is a function returning the log of the likelihood
-                p(data|theta), which needs to be defined outside the class.
-                The function should take two variables (data, theta) and 
-                return a single value log(p(data | theta)).
-
-        data is the input data in whatever form the log_likelihood function
-                is expecting it. This is fixed over the course of running an
-                MCMC chain.
-
-        theta is a list or array with the starting parameter values for the
-                Marcov chain.
-
-        step_size is a list or array with the step size in each dimension of
-                theta.
-
-
-    With the MCMC object, run the following functions:
-        
-        mcmc.step() takes a single step of the chain.
-
-        mcmc.burn(nburn) runs the chain for nburn steps, but it doesn't save
-            the values.
-
-        mcmc.run(nsteps) runs the chain for nsteps steps, saving the results.
-
-        mcmc.accept_fraction() returns what fraction of the candidate steps
-            were taken.
-
-        mcmc.get_samples() returns the sampled theta values in 2d numpy array.
-
-        mcmc.plot_hist() plots a histogram of the sample values for each
-            paramter.  As the chain runs for more steps, this should get
-            smoother.
-        
-        mcmc.plot_samples() plots the sample values over the course of the 
-            chain.  If the burn in is too short, it should be evident as a
-            feature at the start of these plots.
+    """Class that can run an MCMC chain using the Metropolis Hastings
+    algorithm for parameter search. 
     
-        mcmc.calculate_mean() returns mean of all samples for each parameter.
-
-        mcmc.calculate_cov() returns the covariance matrix of the paramters.
+    lwMCMC = lwMCMC(log_likelihood, data, theta, step_size)
         
+    * log_likelihood - function returning the log of the likelihood
+       p(data|theta), which needs to be pre-defined (see example).
+                
+       The function should take two variables (data, theta) and 
+       return a single value log(p(data | theta)).
+
+    * data is the input data in whatever form the log_likelihood function
+        is expecting it. This is fixed over the course of running an
+        MCMC chain.
+
+    * theta is a list or array with the starting parameter values for the
+        Marcov chain.
+
+    * step_size is a list or array with the step size in each dimension of
+        theta.
     """
     
     def __init__(self, log_likelihood, data, theta, step_size, names=None,

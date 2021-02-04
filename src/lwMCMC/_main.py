@@ -1,20 +1,17 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Jan  7 08:29:05 2021
-@author: daniel-furman
-
-* CLASS: Metropolis Hastings Markov Chain Monte Carlo
-* Author / email: Daniel Ryan Furman <dryanfurman@gmail.com>
-* Last modified : Feb. 3, 2021
-* MIT License
-
-"""
+# Module: lwMCMC
+# Author: Daniel Ryan Furman <dryanfurman@gmail.com>
+# License: MIT
+# Release: lwMCMC 0.1.0
+# Last modified : 25/10/2020
+# Github: https://github.com/daniel-furman/lwMCMC
 
 import numpy as np
 import matplotlib.pyplot as plt
 
 class lwMCMC(object):
-    """MCMC chain using a lightweight implementation of the Metropolis
+    
+    """ MCMC chain using a lightweight implementation of the Metropolis
     Hastings search algorithm, an object-oriented class with the 
     following inputs:
         

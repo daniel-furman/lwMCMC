@@ -17,7 +17,7 @@ import numpy as np
 
 # First load lwMCMC class
 
-from src.lwMCMC._main import lwMCMC as MCMC
+from lwMCMC.src.lwMCMC._main import lwMCMC as MCMC
 
 def gauss_log_likelihood(data, theta):
     """Comput a Gaussian log(likelihood) for a trial value theta = (x,y,z)

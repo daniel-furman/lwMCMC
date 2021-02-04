@@ -10,7 +10,7 @@ We implement a Python class with the trivial metropolis hastings algorithm.
 
 ---
 
-Recovered Parameter Constraints | Model with the <img src="https://render.githubusercontent.com/render/math?math=\lambda"> Prior
+Posteriors with 1,2 <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior
 :-------------------------------------------:|:------------------------------:
 ![](examples/data/corners.png) | ![](examples/data/scatter.png)
 

@@ -13,7 +13,7 @@ trivial metropolis hastings algorithm.
 
 Recovered Parameter Constraints | Final Model with Prior
 :-------------------------------------------:|:------------------------------:
-![](data/corners.png) | ![alt-text-2](data/scatter.png "Final")
+![](examples/data/corners.png) | ![](examples/data/scatter.png)
 
 We visualize the recovered parameter constraints on a grid, for lwMCMC on a simulated particle decay model:
 <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">, with 

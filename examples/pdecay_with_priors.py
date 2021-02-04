@@ -10,8 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 import corner
-
-exec(open('MCMC_class.py').read())
+from lwMCMC.src.lwMCMC._main import lwMCMC as MCMC
 
 """
 
@@ -26,31 +25,32 @@ The file ParticleDecay.dat contains (simulated) data of a particle decay.  The
     0.30    15.48     4.23
     0.40    21.85     4.16
     0.50    20.46     4.08
+    
     ...
-
-Model this data as a constant background plus an exponential decay term:
+    
+We will model this data as a constant background plus an exponential
+decay term:
     $$
     R(t) = A + B e^{-\lambda t}
     $$
     where lambda is the decay constant.
 
-(a) Requires a relatively good starting guess. So start by trying to
-eyeball a rough estimate of a reasonable model.
+Requires a relatively good starting guess. So start by trying to
+    eyeball a rough estimate of a reasonable model.
 
-(b) Use the MCMC class to sample the likelihood function
+Use the MCMC class to sample the likelihood function
     $p(\mathcal{D}|\boldsymbol{\theta})$ and obtain the mean and variance of
     $\lambda$.  Starting at the above guess.
 
-(c) Suppose via an independent method tof measurement that the
+Suppose via an independent method tof measurement that the
     background of the instrument is $A = 24.38 \pm 0.44$.  Use this as a
     gaussian prior in your MCMC above to obtain the new posterior
     (mean and variance) for $\lambda$.
 
-(d) Use corner to plot the chains from both parts (b) and (c). 
+Use corner to plot the chains from both parts (b) and (c). 
 
 """
 
-# (a)
 def decay_model(t, theta):
     """Returning the model values of R(t) at the times t,
     given theta = (A, B, lam).
@@ -81,7 +81,6 @@ def plot_data_with_model(data, theta):
 data = np.loadtxt('data/ParticleDecay.dat').T
 plot_data_with_model(data, decay_start())
 
-# (b)
 def decay_loglike(data, theta):
     """Return the natural logarithm of the likelihood P(data | theta) for our
     model of the decay data.
@@ -89,8 +88,6 @@ def decay_loglike(data, theta):
     data is expected to be a tuple of numpy arrays = (t, R, sigma)
     theta is expected to be an array of parameters = (A, B, lam)
     """
-    # Hint: As with the icecream_loglike function, you want to avoid explicit
-    #       for loops in this function, or it will be very slow.
 
     t, r, sigma = data
     n = len(t)
@@ -115,12 +112,12 @@ def decay_nsteps():
     """
     return 100000
 
-# Initial guess from part (a):
+# Initial guess:
 start = decay_start()
 print('Log(like) at {:s} = {:.1f}'.format(str(start),
                                           decay_loglike(data, start)))
 
-# Make the mcmc object
+# Make the object
 decay_mcmc = MCMC(decay_loglike, data, start, decay_step_size(), names=(
     '$A$', '$B$', r'$\lambda$'))
 
@@ -159,8 +156,6 @@ plot_data_with_model(data, mean)
 # And here are the one-d distributions, which should be fairly smooth.
 decay_mcmc.plot_hist()
 
-# (c)
-
 def calculate_prior_weights(mcmc):
     """Calculate appropriate weights for the mcmc samples, given the prior
     A = 24.38 +- 0.44.
@@ -186,12 +181,11 @@ def calculate_lambda_with_prior(mcmc):
     
     return mean[2], cov[2,2]
 
-mean, var = calculate_lambda_with_prior(decay_mcmc)
+mean1, var = calculate_lambda_with_prior(decay_mcmc)
 
 print('With the prior on A, the inferred decay rate is {:.2f} +- {:.2f} / sec'.
-      format(mean, np.sqrt(var)))
+      format(mean1, np.sqrt(var)))
 
-# Question 3d
 def plot_corner_decay(mcmc):
     """Make a corner plot for the parameters of the decay model.
     Include contours at 68% and 95% confidence levels.
@@ -220,10 +214,12 @@ def plot_corner_decay_prior(mcmc):
     plt.show()
     
 plot_corner_decay(decay_mcmc)
-
-# This plot in particular should make it clear why the fitted value of lambda
-# shifted so much when we applied the prior on A.
 plot_corner_decay_prior(decay_mcmc)
 
 
+# Double check that everything worked by looking at the best fit model with
+# the data after fitting with the prior
+mean[2] = mean1
+print(mean)
+plot_data_with_model(data, mean)
 

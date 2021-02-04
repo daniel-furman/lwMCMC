@@ -4,8 +4,10 @@
 
 Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithmm. The operations are powered by NumPy. 
 
+## Example 1: Experimental Geophysics Modeling
 
-## Example 1: Simulation of Particle Decay
+
+## Example 2: Simulation of Particle Decay
 
 ---
 

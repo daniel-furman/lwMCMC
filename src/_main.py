@@ -10,9 +10,6 @@ Created on Thu Jan  7 08:29:05 2021
 # Last modified : 1/7/2021
 # MIT License
 
-# A lightweight mcmc runner for personal use cases
-
-from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
 

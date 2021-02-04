@@ -8,7 +8,7 @@ Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with t
 
 ---
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC model with slope parameter prior
+Posterior model parameter distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC model with a prior on the slope
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
 

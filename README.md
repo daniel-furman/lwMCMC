@@ -12,7 +12,7 @@ Posterior model parameter distributions with <img src="https://render.githubuser
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
 
-Recovered parameter constraints for power law flow model for ice sheets (near-surface depths). In the grid "corner" plot, the entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections alongside one and two sigma error contours. With the 1.8 +- 0.225 prior on the power law stress exponent, the inferred slope parameter is 1.70 +- 0.17.
+Recovered parameter constraints for a power law flow model for firn creep (ice compaction in nature). The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. With the 1.8 +- 0.225 prior on the power law stress exponent, the inferred slope parameter is 1.70 +- 0.17.
 
 ## Example 2: Simulation of Particle Decay
 

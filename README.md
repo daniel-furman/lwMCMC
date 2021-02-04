@@ -10,9 +10,9 @@ trivial metropolis hastings algorithm, denoted as `lwMCMC` given its lightweight
 
 We visualize the recovered parameter constraints on a gridIn the application of lwMCMC to a simulated particle decay model,
 <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}"> with 
-decay constant lambda:
+decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">:
 
-where, the diagonal shows the 1-dimensional posteriors and the lower-left half
+The diagonal shows the 1-dimensional posteriors and the lower-left half
 shows the pairwise projections (alongside the one and two sigma contour errors). 
 
 ---

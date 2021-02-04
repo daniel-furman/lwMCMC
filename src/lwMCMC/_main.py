@@ -36,8 +36,8 @@ class lwMCMC(object):
         theta.
     """
     
-    def __init__(self, log_likelihood, data, theta, step_size,
-                 seed=65428411):
+    def __init__(self, log_likelihood, data, theta, step_size, names=None,
+                 seed=2145):
         self.log_likelihood = log_likelihood
         self.data = data
         self.theta = np.array(theta)

@@ -13,7 +13,7 @@ Created on Thu Jan  7 08:29:05 2021
 import numpy as np
 import matplotlib.pyplot as plt
 
-class MCMC(object):
+class lwMCMC(object):
     """Class that can run an MCMC chain using the Metropolis Hastings\
         algorithm for parameter search
 

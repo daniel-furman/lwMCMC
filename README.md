@@ -10,7 +10,7 @@ Posterior distributions with <img src="https://render.githubusercontent.com/rend
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corners.png) | ![](examples/data/icescatter.png)
 
-* Recovered parameter constraints for power law flow model R(stress) = densification_rate = intercept + slope * stress in log-log space, and <img src="https://render.githubusercontent.com/render/math?math=\R = exp(b0)*\sigma^{b1}">. In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the one and two sigma error contours. We include a prior on the power law exponent (b1) from the ice creep literature to reveal b1 = 1.70 +- 0.17.
+* Recovered parameter constraints for power law flow model (linear power law in log-log space). In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the one and two sigma error contours. We include a prior on the power law exponent (b1) from the ice creep literature to reveal our final estimate for b1, a slope of b1 = 1.70 +- 0.17.
 
 ## Example 2: Simulation of Particle Decay
 

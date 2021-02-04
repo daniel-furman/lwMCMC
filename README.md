@@ -10,7 +10,7 @@ We implement a Python class with the trivial metropolis hastings algorithm using
 
 ---
 
-Posteriors with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | Decay model with the <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior
+Posteriors with parameter error contours (1,2 <img src="https://render.githubusercontent.com/render/math?math=\sigma">) | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior distribution
 :-------------------------------------------:|:------------------------------:
 ![](examples/data/corners.png) | ![](examples/data/scatter.png)
 

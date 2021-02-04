@@ -4,7 +4,7 @@
 
 Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with the trivial metropolis hastings algorithm. The operations are powered by NumPy. 
 
-### Example 1: Experimental geophysics modeling (laboratory data)
+### Example 1: Experimental Geophysics Modeling with Laboratory Data
 
 ---
 
@@ -14,7 +14,7 @@ Posterior model parameter distributions with <img src="https://render.githubuser
 
 Recovered parameter constraints for a power law flow model for firn creep (ice compaction in nature). The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. With the 1.8 +- 0.225 prior on the power law stress exponent, the inferred slope parameter is 1.70 +- 0.17.
 
-## Example 2: Particle decay modeling (simulated data)
+## Example 2: Particle Decay Modeling with Simulated Data
 
 ---
 

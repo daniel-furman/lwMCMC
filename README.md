@@ -14,9 +14,9 @@ Posteriors with <img src="https://render.githubusercontent.com/render/math?math=
 :-------------------------------------------:|:------------------------------:
 ![](examples/data/corners.png) | ![](examples/data/scatter.png)
 
-We visualize an example of recovered parameter constraints for a simulated particle decay model:
-<img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">, with a prior on the 
-decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">. In the corner plot (top left), the diagonal shows the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the
+Recovered parameter constraints for a particle decay simulation:
+<img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">. We include a prior on the 
+decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">. In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the
 one and two sigma error contours. 
 
 

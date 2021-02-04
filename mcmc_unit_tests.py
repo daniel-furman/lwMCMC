@@ -13,9 +13,9 @@ import numpy as np
 # Unit tests for general purpose utility, MCMC. 
 # The asserts statements here are our unit tests.
 
-# Let's test this with a very simple likelihood.  Namely a 3D Gaussian.
+# Let's test this with a 3D Gaussian.
 
-# first load MCMC class
+# First load lwMCMC class
 
 exec(open('MCMC_class.py').read())
 

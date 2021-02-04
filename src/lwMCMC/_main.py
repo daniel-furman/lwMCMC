@@ -14,27 +14,22 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class lwMCMC(object):
-    """Class that can run an MCMC chain using the Metropolis Hastings
-    algorithm for parameter search. 
-    
-    lwMCMC = lwMCMC(log_likelihood, data, theta, step_size)
+    """MCMC chain using a lightweight implementation of the Metropolis
+    Hastings search algorithm, an object-oriented class with the 
+    following inputs:
         
     * log_likelihood - function returning the log of the likelihood
-       p(data|theta), which needs to be pre-defined (see example).
-                
-       The function should take two variables (data, theta) and 
-       return a single value log(p(data | theta)).
+       p(data|theta), pre-defined (see examples). The function should
+       take two variables (data, theta) and return a single value
+       log(p(data | theta)).
 
-    * data is the input data in whatever form the log_likelihood function
-        is expecting it. This is fixed over the course of running an
-        MCMC chain.
+    * data is the fixed input data in the log_likelihood form
 
     * theta is a list or array with the starting parameter values for the
         Marcov chain.
 
     * step_size is a list or array with the step size in each dimension of
-        theta.
-    """
+        theta."""
     
     def __init__(self, log_likelihood, data, theta, step_size, names=None,
                  seed=2145):
@@ -52,6 +47,7 @@ class lwMCMC(object):
         self.names = names            
 
     def step(self, save=True):
+        """Take a step in the MCMC chain (a single step)"""
         new_theta = self.theta + self.step_size * self.rng.normal(
             size=len(self.step_size))
         new_loglike = self.log_likelihood(self.data, new_theta)
@@ -72,12 +68,12 @@ class lwMCMC(object):
                 self.naccept += 1
 
     def burn(self, nburn):
-        """Take nburn steps, but don't save the results"""
+        """Number of burns (results not saved)"""
         for i in range(nburn):
             self.step(save=False)
 
     def run(self, nsteps):
-        """Take nsteps steps"""
+        """Take nsteps steps (results saved)"""
         for i in range(nsteps):
             self.step()
 
@@ -91,13 +87,7 @@ class lwMCMC(object):
         
     def clear(self, step_size=None, theta=None):
         """Clear the list of stored samples from any runs so far.
-        
-        You can also change the step_size to a new value at this time by
-        giving a step_size as an optional parameter value.
-        
-        In addition, you can reset theta to a new starting value if theta is
-        not None.
-        """
+        Optional change step_size or theta here."""
         if step_size is not None:
             assert len(step_size) == self.nparams
             self.step_size = np.array(step_size)
@@ -136,20 +126,12 @@ class lwMCMC(object):
 
     def calculate_mean(self, weight=None):
         """Calculate the mean of each parameter according to the samples
-        taken so far.
-        
-        Optionally, provide a weight array to weight the samples.
-        
-        Returns the mean values as a numpy array.
-        """
+        taken so far. Optionally, provide a weight array to weight
+        the samples."""
         return np.average(self.get_samples(), axis=0, weights=weight)
     
     def calculate_cov(self, weight=None):
         """Calculate the covariance matrix of the parameters according to
-        the samples taken so far.
-
-        Optionally, provide a weight array to weight the samples.
-        
-        Returns the covariance matrix as a 2d numpy array.
-        """
+        the samples taken so far. Optionally, provide a weight array to 
+        weight the samples."""
         return np.cov(self.get_samples(), rowvar=False, aweights=weight)

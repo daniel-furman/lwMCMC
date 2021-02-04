@@ -1,14 +1,14 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jan  7 08:29:05 2021
+@author: daniel-furman
 
-@author: danielfurman
+* CLASS: Metropolis Hastings Markov Chain Monte Carlo
+* Author / email: Daniel Ryan Furman <dryanfurman@gmail.com>
+* Last modified : Feb. 3, 2021
+* MIT License
+
 """
-# CLASS: Metropolis Hastings Markov Chain Monte Carlo
-# Author: Daniel Furman <dryanfurman@gmail.com>
-# Last modified : Feb. 3, 2021
-# MIT License
 
 import numpy as np
 import matplotlib.pyplot as plt

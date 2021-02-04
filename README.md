@@ -2,8 +2,7 @@
 
 ---
 
-Multi-dimensional model parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC).
-We implement a Python class with the trivial metropolis hastings algorithm using only NumPy and base operations. 
+Modeling space samples with lightweight Markov Chain Monte Carlo (MCMC). An object-oriented Python class with the trivial metropolis hastings algorithmm, powered by NumPy. 
 
 
 ## Example: Particle Decay Modeling

@@ -1,16 +1,11 @@
+sudo: required
+dist: xenial
 language: python
+virtualenv:
+  system_site_packages: true
 python:
-  - "3.6"
-  
-before_install:
-  - python --version
-  - pip install -U pip
-  - pip install -U pytest
-  - pip install codecov
-  
+- '3.6'
 install:
-  - pip install .
-  - pip install -r requirements.txt
-  
-script: 
-  - tests/unit_tests.py
+- pip install -r requirements.txt
+script: pytest
+after_script: cd ~

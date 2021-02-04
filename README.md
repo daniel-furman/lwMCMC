@@ -12,7 +12,7 @@ Posterior model parameter distributions with <img src="https://render.githubuser
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
 
-Recovered parameter constraints for power law flow model for ice sheets (near-surface depths). In the grid "corner" plot, the entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections alongside one and two sigma error contours. We set a prior on the power law exponent from the ice physics literature b1: 1.8 +- 0.225 to generate our estimate for b1:  1.70 +- 0.17.
+Recovered parameter constraints for power law flow model for ice sheets (near-surface depths). In the grid "corner" plot, the entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections alongside one and two sigma error contours. We set a prior on the power law exponent from the ice physics literature 1.8 +- 0.225 to generate our estimate 1.70 +- 0.17.
 
 ## Example 2: Simulation of Particle Decay
 

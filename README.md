@@ -1,13 +1,21 @@
+### lightweight Markov Chain Monte Carlo
+
+---
+
 Multi-dimensional model parameter spaces are commonly sampled using Markov Chain Monte Carlo (MCMC).
 Here, we implement am object-oriented implementation of MCMC based on the
 trivial metropolis hastings algorithm, denoted as `lwMCMC` given its lightweight nature. 
 
-In the application of lwMCMC to a simulated particle decay model, we  
-visualize the recovered parameter constraints on a grid:
+---
+
+We visualize the recovered parameter constraints on a gridIn the application of lwMCMC to a simulated particle decay model,
+<img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}"> with 
+decay constant lambda:
 
 where, the diagonal shows the 1-dimensional posteriors and the lower-left half
-shows the pairwise projections.
+shows the pairwise projections (alongside the one and two sigma contour errors). 
 
+---
 
 A lwMCMC object has the following functions:
         

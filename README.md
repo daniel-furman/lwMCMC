@@ -11,10 +11,15 @@ trivial metropolis hastings algorithm.
 
 ---
 
-We visualize the recovered parameter constraints on a gridIn the application of lwMCMC to a simulated particle decay model,
-<img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}"> with 
-decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">. The diagonal above shows the
-1-dimensional posteriors and the lower-left half shows the pairwise projections (alongside the one and two sigma error contours). 
+Recovered Parameter Constraints | Final Model with Prior
+:-------------------------------------------:|:------------------------------:
+![](data/corners.png) | ![alt-text-2](data/scatter.png "Final")
+
+We visualize the recovered parameter constraints on a grid, for lwMCMC on a simulated particle decay model:
+<img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">, with 
+decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">. The diagonal shows the
+1-dimensional posterior distribution results and the lower-left half shows the pairwise projections alongside the
+one and two sigma error contours. 
 
 
 

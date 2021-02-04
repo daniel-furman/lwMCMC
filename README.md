@@ -11,7 +11,7 @@ Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with t
 
 Posteriors for modeling parameters with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior on the decay rate param 
 :---------------------------------:|:----------------------------------------:
-![](examples/data/corners.png) | ![](examples/data/.png)
+![](examples/data/corners.png) | ![](examples/data/scatter.png)
 
 
 * Recovered parameter constraints for a particle decay simulation: <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">. We include a prior on the decay constant <img src="https://render.githubusercontent.com/render/math?math=\lambda">. In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the one and two sigma error contours. 

@@ -6,7 +6,7 @@ Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with t
 
 ## Example 1: Experimental Geophysics Modeling
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | MCMC fit with a prior on the power law exponent
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with power law exponent prior b1 = 1.8 +- 0.225
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corners.png) | ![](examples/data/icescatter.png)
 
@@ -16,7 +16,7 @@ Posterior distributions with <img src="https://render.githubusercontent.com/rend
 
 ---
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> error contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior on the decay rate param 
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma" contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior (simulated example). 
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/gridsims.png) | ![](examples/data/sims.png)
 

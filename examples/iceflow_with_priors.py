@@ -63,13 +63,6 @@ Use the MCMC class to sample the likelihood function and obtain the mean and
 
 Then use the above knowledge as gaussian priors in your MCMC to obtain the new
     posterior(mean and variance) for $\n$.
-
-I also intent to compare our MCMC class's trivial mh algorithm to at least
-    one other - sgld perhaps.
-
-Lastly, use these distributions as the priors on the final model, to sample
-    the distribution of the semi empirical param in the flow law.
-
 """
 
 # log-log linear regression of power law relationship for green series

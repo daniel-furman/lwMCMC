@@ -8,7 +8,7 @@ Parameter space sampling with lightweight Markov Chain Monte Carlo (MCMC) with t
 
 Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with power law exponent prior
 :---------------------------------:|:----------------------------------------:
-![](examples/data/ice_corners.png) | ![](examples/data/icescatter.png)
+![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
 
 Recovered parameter constraints for power law flow model (linear power law in log-log space). In the corner plot (left), the diagonal entries reveal the 1-dimensional posterior distributions and the lower-left half shows the pairwise projections alongside the one and two sigma error contours. We include a prior on the power law exponent from the ice creep literature (b1 = 1.8 +- 0.225) to reveal our final estimate for b1, a slope of b1 = 1.70 +- 0.17.
 

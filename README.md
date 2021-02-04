@@ -25,7 +25,7 @@ Posterior distributions with <img src="https://render.githubusercontent.com/rend
 
 Recovered parameter constraints for a particle decay simulation: <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">, see withint he corner plot. With a prior on A, the inferred decay rate lambda is 0.50 +- 0.05 / sec.
 
-## Class Functions 
+## `lwMCMC` Functions 
 
 ---
 

@@ -1,4 +1,4 @@
-## lw Markov Chain Monte Carlo
+## `lwMCMC` Markov Chain Monte Carlo in Python
 
 ---
 

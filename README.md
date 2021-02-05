@@ -5,9 +5,11 @@
 
 ---
 
+
 Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings.
 
-### Example 1: Experimental Geophysics Modeling with Laboratory Data
+
+### Example 1: Rheological Modeling with Experimental Geophysics Data
 
 ---
 
@@ -15,7 +17,9 @@ Posterior distributions with <img src="https://render.githubusercontent.com/rend
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/grid_ice.png) | ![](examples/data/ice_scatter.png)
 
-Recovered parameter constraints for a power law flow model for firn creep (ice compaction in nature). The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. 
+Recovered parameter constraints for a power law flow model for ice compaction in nature via power law creep (see ice creep literature). 
+
+* The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. 
 
 * With the slope parameters's 1.8 +- 0.225 prior, the Bayesian inferred slope is 1.70 +- 0.17.
 

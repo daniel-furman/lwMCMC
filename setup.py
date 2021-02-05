@@ -13,32 +13,28 @@ from setuptools import setup, find_packages
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-with open('docs/long_description.md') as f:
+with open('README.md') as f:
     readme = f.read()
-
-with open('LICENSE') as f:
-    license = f.read()
 
 setup(
     name="lwMCMC",
-    version="0.1.0",
+    version="0.1",
     author="Daniel Ryan Furman",
     author_email="dryanfurman@gmail.com",
-    description=("Class for MCMC serach in Python"),
-    long_description=readme,
-    long_description_content_type='text/markdown',
-    license=license,
-    keywords="bayesian montecarlo machinelearning deeplearning",
+    description=("Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings"),
+    long_description="See documentation at https://github.com/daniel-furman/lwMCMC",
+    license="MIT",
+    keywords="bayesian-inference machine-learning statistical-modeling",
     url="https://github.com/daniel-furman/lwMCMC",
     packages=find_packages(),
     classifiers=[
-        "Topic :: MCMC for predictive modeling",
-        "License :: MIT",
-        "Intended Audience :: Developers",
+        "Development Status :: 3 - Alpha",
+        "Topic :: Utilities",
+        "License :: OSI Approved :: MIT License",
         "Intended Audience :: Science/Research",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Topic :: Scientific/Engineering :: Bayesian Statistics"
+        "Topic :: Scientific/Engineering"
         ],
 
 )

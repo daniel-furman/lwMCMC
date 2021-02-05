@@ -1,4 +1,5 @@
 
+https://travis-ci.com/daniel-furman/lwMCMC.svg?branch=main
 
 ## `lwMCMC` lightweight Markov Chain Monte Carlo
 

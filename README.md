@@ -13,7 +13,7 @@ Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis H
 
 Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a slope prior
 :---------------------------------:|:----------------------------------------:
-![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
+![](examples/data/grid_ice.png) | ![](examples/data/ice_scatter.png)
 
 Recovered parameter constraints for a power law flow model for firn creep (ice compaction in nature). The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. 
 
@@ -34,7 +34,9 @@ Recovered parameter constraints for a particle decay simulation: <img src="https
 
 ---
 
-A lwMCMC object has the following class functions:
+A lwMCMC object has class functions to perform Bayesian inference. 
+
+* define the log(likelihood) function first (not in the class).
 
 To run the chain:
         
@@ -46,6 +48,7 @@ To run the chain:
 
 * mcmc.ratio_accepted() returns what fraction of the candidate steps
             were taken.
+         
             
 Manage the results:
 

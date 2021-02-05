@@ -13,7 +13,7 @@ from setuptools import setup, find_packages
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-with open('README.md') as f:
+with open('docs/long_description.md') as f:
     readme = f.read()
 
 with open('LICENSE') as f:
@@ -25,9 +25,12 @@ setup(
     author="Daniel Ryan Furman",
     author_email="dryanfurman@gmail.com",
     description=("Class for MCMC serach in Python"),
-    license=license,
     long_description=readme,
     long_description_content_type='text/markdown',
+    license=license,
+    keywords="bayesian montecarlo machinelearning deeplearning",
+    url="https://github.com/daniel-furman/lwMCMC",
+    packages=find_packages(),
     classifiers=[
         "Topic :: MCMC for predictive modeling",
         "License :: MIT",
@@ -37,14 +40,5 @@ setup(
         "Programming Language :: Python :: 3",
         "Topic :: Scientific/Engineering :: Bayesian Statistics"
         ],
-    keywords="bayesian montecarlo machinelearning deeplearning",
-    url="https://github.com/daniel-furman/lwMCMC",
-    packages=find_packages(exclude=("test", "docs",)),
-    entry_points={
-        "console_scripts": [
-            "lwMCMC=lwMCMC._main:main",
-        ]
-    },
-    
 
 )

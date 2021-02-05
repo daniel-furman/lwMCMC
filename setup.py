@@ -26,9 +26,6 @@ setup(
     author_email="dryanfurman@gmail.com",
     description=("Class for MCMC serach in Python"),
     license=license,
-    keywords="bayesian montecarlo machinelearning deeplearning",
-    url="https://github.com/daniel-furman/lwMCMC",
-    packages=find_packages(exclude=("test", "docs",)),
     classifiers=[
         "Topic :: MCMC for predictive modeling",
         "License :: MIT",
@@ -38,5 +35,14 @@ setup(
         "Programming Language :: Python :: 3",
         "Topic :: Scientific/Engineering :: Bayesian Statistics"
         ],
+    keywords="bayesian montecarlo machinelearning deeplearning",
+    url="https://github.com/daniel-furman/lwMCMC",
+    packages=find_packages(exclude=("test", "docs",)),
+    entry_points={
+        "console_scripts": [
+            "lwMCMC=lwMCMC._main:main",
+        ]
+    },
+    
 
 )

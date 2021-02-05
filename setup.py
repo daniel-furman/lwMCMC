@@ -27,7 +27,7 @@ setup(
     description=("Class for MCMC serach in Python"),
     license=license,
     long_description=readme,
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     classifiers=[
         "Topic :: MCMC for predictive modeling",
         "License :: MIT",

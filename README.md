@@ -11,7 +11,7 @@ Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis H
 
 ---
 
-Posterior model parameter distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC model with slope prior
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a slope prior
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/ice_corner.png) | ![](examples/data/ice_scatter.png)
 
@@ -21,7 +21,7 @@ Recovered parameter constraints for a power law flow model for firn creep (ice c
 
 ---
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | Decay model with <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/gridsims.png) | ![](examples/data/sims.png)
 

@@ -8,7 +8,7 @@ Created on Wed Feb  3 23:17:41 2021
 
 import os
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -28,7 +28,7 @@ setup(
     license=license,
     keywords="bayesian montecarlo machinelearning deeplearning",
     url="https://github.com/daniel-furman/lwMCMC",
-    packages=find_packages(),
+    packages=["lwMCMC"],
     classifiers=[
         "Topic :: MCMC for predictive modeling",
         "License :: MIT",

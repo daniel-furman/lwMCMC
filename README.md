@@ -11,14 +11,14 @@ Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis H
 
 ### Package layout
 
-[LICENSE](https://github.com/daniel-furman/lwMCMC/blob/main/LICENSE) - the MIT license, which applies to this package
-README.md - the README file, which you are now reading
-[requirements.txt](https://github.com/daniel-furman/lwMCMC/blob/main/requirements.txt) - prerequisites to install this package, used by pip
-[setup.py](https://github.com/daniel-furman/lwMCMC/blob/main/setup.py) - installer script
-[docs](https://github.com/daniel-furman/lwMCMC/tree/main/docs)/ - contains documentation on package installation and usage
-[examples](https://github.com/daniel-furman/lwMCMC/tree/main/examples)/ - use cases for Bayesian Modeling
-[lwMCMC](https://github.com/daniel-furman/lwMCMC/tree/main/lwMCMC)/ - the library code itself
-[tests](https://github.com/daniel-furman/lwMCMC/tree/main/test)/ - unit tests
+* [LICENSE](https://github.com/daniel-furman/lwMCMC/blob/main/LICENSE) - the MIT license, which applies to this package
+* README.md - the README file, which you are now reading
+* [requirements.txt](https://github.com/daniel-furman/lwMCMC/blob/main/requirements.txt) - prerequisites to install this package, used by pip
+* [setup.py](https://github.com/daniel-furman/lwMCMC/blob/main/setup.py) - installer script
+* [docs](https://github.com/daniel-furman/lwMCMC/tree/main/docs)/ - contains documentation on package installation and usage
+* [examples](https://github.com/daniel-furman/lwMCMC/tree/main/examples)/ - use cases for Bayesian Modeling
+* [lwMCMC](https://github.com/daniel-furman/lwMCMC/tree/main/lwMCMC)/ - the library code itself
+* [tests](https://github.com/daniel-furman/lwMCMC/tree/main/test)/ - unit tests
 
 
 

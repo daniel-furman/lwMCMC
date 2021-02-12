@@ -9,7 +9,20 @@
 Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings.
 
 
-### Example 1: Rheological Modeling with Experimental Geophysics Data
+### Package layout
+
+    [LICENSE](https://github.com/daniel-furman/lwMCMC/blob/main/LICENSE) - the MIT license, which applies to this package
+    README.md - the README file, which you are now reading
+    [requirements.txt](https://github.com/daniel-furman/lwMCMC/blob/main/requirements.txt) - prerequisites to install this package, used by pip
+    [setup.py](https://github.com/daniel-furman/lwMCMC/blob/main/setup.py) - installer script
+    [docs](https://github.com/daniel-furman/lwMCMC/tree/main/docs)/ - contains documentation on package installation and usage
+    [examples](https://github.com/daniel-furman/lwMCMC/tree/main/examples)/ - use cases for Bayesian Modeling
+    [lwMCMC](https://github.com/daniel-furman/lwMCMC/tree/main/lwMCMC)/ - the library code itself
+    [tests](https://github.com/daniel-furman/lwMCMC/tree/main/test)/ - unit tests
+
+
+
+### Case 1: Experimental Geophysics Modeling with Bayesian Inference
 
 ---
 
@@ -23,7 +36,7 @@ Recovered parameter constraints for a power law flow model for ice compaction in
 
 * With the slope parameters's 1.8 +- 0.225 prior, the Bayesian inferred slope is 1.70 +- 0.17.
 
-## Example 2: Particle Decay Modeling with a Simulated Dataset
+### Example 2: Particle Decay Modeling with Bayesian Inference
 
 ---
 
@@ -34,7 +47,7 @@ Posterior distributions with <img src="https://render.githubusercontent.com/rend
 
 Recovered parameter constraints for a particle decay simulation: <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">. 
 
-## `lwMCMC` Class Functions 
+### `lwMCMC`  Functions 
 
 ---
 
@@ -54,9 +67,10 @@ To run the chain:
             were taken.
          
             
-Manage the results:
+To manage the results:
 
 * mcmc.clear_chain() clears the MCMC chain
+
 * mcmc.chain_samples() returns the sampled param values in 2d numpy array.
 
 * mcmc.hist_plotter() plots a histogram of the sample values for each

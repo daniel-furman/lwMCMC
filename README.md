@@ -1,7 +1,7 @@
 
-[![Build Status](https://travis-ci.com/daniel-furman/lwMCMC.svg?branch=main)](https://travis-ci.com/daniel-furman/lwMCMC)
+[![Build Status](https://travis-ci.com/daniel-furman/ltwMCMC.svg?branch=main)](https://travis-ci.com/daniel-furman/ltwMCMC)
 
-## `lwMCMC` lightweight Markov Chain Monte Carlo
+## `ltwMCMC` lightweight Markov Chain Monte Carlo
 
 ---
 
@@ -11,14 +11,14 @@ Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis H
 
 ### Package layout
 
-* [LICENSE](https://github.com/daniel-furman/lwMCMC/blob/main/LICENSE) - the MIT license, which applies to this package
+* [LICENSE](https://github.com/daniel-furman/ltwMCMC/blob/main/LICENSE) - the MIT license, which applies to this package
 * README.md - the README file, which you are now reading
-* [requirements.txt](https://github.com/daniel-furman/lwMCMC/blob/main/requirements.txt) - prerequisites to install this package, used by pip
-* [setup.py](https://github.com/daniel-furman/lwMCMC/blob/main/setup.py) - installer script
-* [docs](https://github.com/daniel-furman/lwMCMC/tree/main/docs)/ - contains documentation on package installation and usage
-* [examples](https://github.com/daniel-furman/lwMCMC/tree/main/examples)/ - use cases for Bayesian Modeling
-* [lwMCMC](https://github.com/daniel-furman/lwMCMC/tree/main/lwMCMC)/ - the library code itself
-* [tests](https://github.com/daniel-furman/lwMCMC/tree/main/test)/ - unit tests
+* [requirements.txt](https://github.com/daniel-furman/ltwMCMC/blob/main/requirements.txt) - prerequisites to install this package, used by pip
+* [setup.py](https://github.com/daniel-furman/ltwMCMC/blob/main/setup.py) - installer script
+* [docs](https://github.com/daniel-furman/ltwMCMC/tree/main/docs)/ - contains documentation on package installation and usage
+* [examples](https://github.com/daniel-furman/ltwMCMC/tree/main/examples)/ - use cases for Bayesian Modeling
+* [ltwMCMC](https://github.com/daniel-furman/ltwMCMC/tree/main/ltwMCMC)/ - the library code itself
+* [tests](https://github.com/daniel-furman/ltwMCMC/tree/main/test)/ - unit tests
 
 
 
@@ -47,11 +47,11 @@ Posterior distributions with <img src="https://render.githubusercontent.com/rend
 
 Recovered parameter constraints for a particle decay simulation: <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">. 
 
-### `lwMCMC`  Functions 
+### `ltwMCMC`  Functions 
 
 ---
 
-A lwMCMC object has class functions to perform Bayesian inference. 
+A ltwMCMC object has class functions to perform Bayesian inference. 
 
 * define the log(likelihood) function first (not in the class).
 

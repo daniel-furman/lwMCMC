@@ -3,7 +3,7 @@
 # License: MIT
 # Release: ltwMCMC v.0.1
 # Last modified : 2.9.2021
-# Github: https://github.com/daniel-furman/lwMCMC
+# Github: https://github.com/daniel-furman/ltwMCMC
 
 import numpy as np
 import matplotlib.pyplot as plt

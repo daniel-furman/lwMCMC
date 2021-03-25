@@ -1,9 +1,9 @@
-# Module: ltwMCMC
+# Module: lwMCMC
 # Author: Daniel Ryan Furman <dryanfurman@gmail.com>
 # License: MIT
-# Release: ltwMCMC v.0.1
+# Release: lwMCMC v.0.1
 # Last modified : 2.9.2021
-# Github: https://github.com/daniel-furman/ltwMCMC
+# Github: https://github.com/daniel-furman/lwMCMC
 
 import numpy as np
 import matplotlib.pyplot as plt

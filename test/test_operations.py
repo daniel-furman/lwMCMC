@@ -11,7 +11,7 @@ from pytest import fixture
 
 @fixture
 def op():
-    from ltwMCMC._main import lwMCMC as MCMC
+    from lwMCMC._main import lwMCMC as MCMC
     return MCMC(gauss_log_likelihood, data, theta, step_size,
                 names=('$x$','$y$','$z$'))
 

@@ -1,7 +1,7 @@
 
 [![Build Status](https://travis-ci.com/daniel-furman/ltwMCMC.svg?branch=main)](https://travis-ci.com/daniel-furman/ltwMCMC)
 
-## `ltwMCMC` lightweight Markov Chain Monte Carlo
+## ltwMCMC: lightweight Markov Chain Monte Carlo
 
 ---
 
@@ -9,7 +9,7 @@
 Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings.
 
 
-### Package layout
+### Package Layout
 
 * [LICENSE](https://github.com/daniel-furman/ltwMCMC/blob/main/LICENSE) - the MIT license, which applies to this package
 * README.md - the README file, which you are now reading

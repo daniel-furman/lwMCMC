@@ -36,17 +36,6 @@ Recovered parameter constraints for a power law flow model for ice compaction in
 
 * With the slope parameters's 1.8 +- 0.225 prior, the Bayesian inferred slope is 1.70 +- 0.17.
 
-### Example 2: Particle Decay Modeling with Bayesian Inference
-
----
-
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a <img src="https://render.githubusercontent.com/render/math?math=\lambda"> prior
-:---------------------------------:|:----------------------------------------:
-![](examples/data/gridsims.png) | ![](examples/data/sims.png)
-
-
-Recovered parameter constraints for a particle decay simulation: <img src="https://render.githubusercontent.com/render/math?math=\R(t) = A + B e^{-\lambda t}">. 
-
 ### `lwMCMC`  Functions 
 
 ---

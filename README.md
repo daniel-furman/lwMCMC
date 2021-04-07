@@ -7,7 +7,7 @@
 
 Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings.
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a slope prior
+Posterior distributions with sigma contours | MCMC fit with a slope prior on the linear model
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/grid_ice.png) | ![](examples/data/ice_scatter.png)
 

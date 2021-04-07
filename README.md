@@ -5,9 +5,19 @@
 
 ---
 
-
 Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings.
 
+Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a slope prior
+:---------------------------------:|:----------------------------------------:
+![](examples/data/grid_ice.png) | ![](examples/data/ice_scatter.png)
+
+Recovered parameter constraints for a power law flow model for ice compaction in nature via power law creep (see ice creep literature). 
+
+* The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. 
+
+* With the slope parameters's 1.8 +- 0.225 prior, the Bayesian inferred slope is 1.70 +- 0.17.
+
+---
 
 ### Package Layout
 
@@ -21,24 +31,9 @@ Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis H
 * [tests](https://github.com/daniel-furman/lwMCMC/tree/main/test)/ - unit tests
 
 
-
-### Case 1: Experimental Geophysics Modeling with Bayesian Inference
-
 ---
 
-Posterior distributions with <img src="https://render.githubusercontent.com/render/math?math=\sigma"> contours | MCMC fit with a slope prior
-:---------------------------------:|:----------------------------------------:
-![](examples/data/grid_ice.png) | ![](examples/data/ice_scatter.png)
-
-Recovered parameter constraints for a power law flow model for ice compaction in nature via power law creep (see ice creep literature). 
-
-* The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. 
-
-* With the slope parameters's 1.8 +- 0.225 prior, the Bayesian inferred slope is 1.70 +- 0.17.
-
-### `lwMCMC`  Functions 
-
----
+### lwMCMC  Functions 
 
 A lwMCMC object has class functions to perform Bayesian inference. 
 

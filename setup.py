@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb  3 23:17:41 2021
-
-@author: danielfurman
-"""
+# Module: lwMCMC
+# Author: Daniel Ryan Furman <dryanfurman@gmail.com>
+# License: MIT
+# Release: lwMCMC 0.2
+# Last modified : May 11 2021
+# Github: https://github.com/daniel-furman/lwMCMC
 
 import os
 import sys
@@ -18,15 +17,16 @@ with open('README.md') as f:
 
 setup(
     name="lwMCMC",
-    version="0.1",
+    version="0.2",
     author="Daniel Ryan Furman",
     author_email="dryanfurman@gmail.com",
-    description=("Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings"),
+    description=("Bayesian inference with MCMC parameter space sampling, with options to compare a from-scratch random walk NumPy implementation with the PyMC3 Hamiltonian approach."),
     long_description="See documentation at https://github.com/daniel-furman/lwMCMC",
     license="MIT",
     keywords="bayesian-inference machine-learning statistical-modeling",
     url="https://github.com/daniel-furman/lwMCMC",
     packages=find_packages(),
+    install_requires=["numpy", "matplotlib", "pymc3"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",

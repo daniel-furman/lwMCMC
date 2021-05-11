@@ -5,9 +5,9 @@
 
 ---
 
-Parameter space sampling with MCMC, with the option to compare a from-scratch NumPy approach and one powered by the PyMC3 package. 
+`from lwMCMC import MCMC`
 
-For example, below, see Bayesian inference results for an Experimental Geophysics regression problem. 
+Parameter space sampling with MCMC, with the option to compare a from-scratch NumPy approach and one powered by the PyMC3 package. For example, below, see Bayesian inference results for an Experimental Geophysics regression problem. To see the code that went into these plots, please find the files in the `examples/` folder. 
 
 Posterior distributions | MCMC model fit
 :---------------------------------:|:----------------------------------------:

@@ -5,15 +5,16 @@
 
 ---
 
-Parameter space sampling with lightweight MCMC powered by NumPy and Metropolis Hastings.
+Parameter space sampling with MCMC, with the option to compare a from-scratch NumPy approach and one powered by the PyMC3 package. 
 
-Posterior distributions with sigma contours | MCMC fit with a slope prior on the linear model
+For example, below, see Bayesian inference results for an Experimental Geophysics regression problem. 
+
+Posterior distributions | MCMC model fit
 :---------------------------------:|:----------------------------------------:
 ![](examples/data/grid_ice.png) | ![](examples/data/ice_scatter.png)
 
-Recovered parameter constraints for a power law flow model for ice compaction in nature via power law creep (see ice creep literature). 
 
-* The grid entries reveal the 1-dimensional posterior distributions of our parameters, as well as the pairwise projections with one and two sigma modeling error contours. 
+* The grid entries reveal the 1-dimensional posterior distributions of our parameters after setting our prior beliefs, as well as the pairwise projections with one and two sigma error contours. 
 
 * With the slope parameters's 1.8 +- 0.225 prior, the Bayesian inferred slope is 1.70 +- 0.17.
 
@@ -31,38 +32,3 @@ Recovered parameter constraints for a power law flow model for ice compaction in
 * [tests](https://github.com/daniel-furman/lwMCMC/tree/main/test)/ - unit tests
 
 
----
-
-### lwMCMC  Functions 
-
-A lwMCMC object has class functions to perform Bayesian inference. 
-
-* define the log(likelihood) function first (not in the class).
-
-To run the chain:
-        
-* mcmc.stepchain_forward() takes a single step of the chain.
-
-* mcmc.burnout(nburn) runs the chain for nburn steps.
-
-* mcmc.run_forward(nsteps) runs the chain for nsteps steps, saving the results.
-
-* mcmc.ratio_accepted() returns what fraction of the candidate steps
-            were taken.
-         
-            
-To manage the results:
-
-* mcmc.clear_chain() clears the MCMC chain
-
-* mcmc.chain_samples() returns the sampled param values in 2d numpy array.
-
-* mcmc.hist_plotter() plots a histogram of the sample values for each
-            parameter.
-   
-* mcmc.sample_plotter() plots the sample values over the course of the 
-            chain.
-            
-* mcmc.calcmean() returns mean of all samples for each parameter.
-
-* mcmc.calccov() returns the covariance matrix of the parameters.

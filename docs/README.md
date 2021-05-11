@@ -6,6 +6,6 @@ You may need to change the location of the base conda env (for example, type `wh
 
 Once in the Jupyter notebook, import the main class as follows:
 
-`from lwMCMC._main import lwMCMC as MCMC`
+`from lwMCMC import MCMC`
 
 You can type `?MCMC` for info. 

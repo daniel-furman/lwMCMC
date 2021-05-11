@@ -1,19 +1,19 @@
 # Module: lwMCMC
 # Author: Daniel Ryan Furman <dryanfurman@gmail.com>
 # License: MIT
-# Release: lwMCMC v.0.1
-# Last modified : 2.9.2021
+# Release: lwMCMC 0.2
+# Last modified : May 11 2021
 # Github: https://github.com/daniel-furman/lwMCMC
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-class lwMCMC(object):
-    
+class MCMC(object):
+
     """ MCMC chain using a lightweight implementation of the Metropolis
-    Hastings search algorithm, an object-oriented class with the 
+    Hastings search algorithm, an object-oriented class with the
     following inputs:
-        
+
     * log_likelihood - function returning the log of the likelihood
        p(data|theta), pre-defined (see examples). The function should
        take two variables (data, theta) and return a single value
@@ -26,9 +26,9 @@ class lwMCMC(object):
 
     * step_size is a list or array with the step size in each dimension of
         theta."""
-    
+
     def __init__(self, log_likelihood, data, theta, step_size, names=None,
-                 seed=2145):
+                 seed=42):
         self.log_likelihood = log_likelihood
         self.data = data
         self.theta = np.array(theta)
@@ -40,9 +40,9 @@ class lwMCMC(object):
         self.samples = []
         if names is None:
             names = ["Paramter {:d}".format(k+1) for k in range(self.nparams)]
-        self.names = names            
+        self.names = names
 
-    def step(self, save=True):
+    def single_step(self, save=True):
         """Take a step in the MCMC chain (a single step)"""
         new_theta = self.theta + self.step_size * self.rng.normal(
             size=len(self.step_size))
@@ -60,28 +60,28 @@ class lwMCMC(object):
 
         if save:
             self.samples.append(self.theta)
-            if take_step: 
+            if take_step:
                 self.naccept += 1
 
-    def burn(self, nburn):
+    def burnout(self, nburn):
         """Number of burns (results not saved)"""
         for i in range(nburn):
-            self.step(save=False)
+            self.single_step(save=False)
 
-    def run(self, nsteps):
+    def run_chain(self, nsteps):
         """Take nsteps steps (results saved)"""
         for i in range(nsteps):
-            self.step()
+            self.single_step()
 
-    def accept_fraction(self):
-        """Returns the fraction of candidate steps that were accpeted
+    def ratio_accepted(self):
+        """Returns the fraction of candidate steps that were accepted
         so far."""
         if len(self.samples) > 0:
             return float(self.naccept) / len(self.samples)
         else:
             return 0.
-        
-    def clear(self, step_size=None, theta=None):
+
+    def clear_chain(self, step_size=None, theta=None):
         """Clear the list of stored samples from any runs so far.
         Optional change step_size or theta here."""
         if step_size is not None:
@@ -93,26 +93,26 @@ class lwMCMC(object):
             self.current_loglike = self.log_likelihood(self.data, self.theta)
         self.samples = []
         self.naccept = 0
-        
-    def get_samples(self):
+
+    def chain_samples(self):
         """Return the sampled theta values at each step in the chain as a
         2d numpy array."""
         return np.array(self.samples)
-        
-    def plot_hist(self):
+
+    def hist_plotter(self):
         """Plot a histogram of the sample values for each parameter in the
         theta vector."""
-        all_samples = self.get_samples()
+        all_samples = self.chain_samples()
         for k in range(self.nparams):
             theta_k = all_samples[:,k]
             plt.hist(theta_k, bins=100)
             plt.xlabel(self.names[k])
             plt.ylabel("N Samples")
             plt.show()
-        
-    def plot_samples(self):
+
+    def sample_plotter(self):
         """Plot the sample values over the course of the chain so far."""
-        all_samples = self.get_samples()
+        all_samples = self.chain_samples()
         for k in range(self.nparams):
             theta_k = all_samples[:,k]
             plt.plot(range(len(theta_k)), theta_k)
@@ -120,14 +120,14 @@ class lwMCMC(object):
             plt.ylabel(self.names[k])
             plt.show()
 
-    def calculate_mean(self, weight=None):
+    def parameter_means(self, weight=None):
         """Calculate the mean of each parameter according to the samples
         taken so far. Optionally, provide a weight array to weight
         the samples."""
-        return np.average(self.get_samples(), axis=0, weights=weight)
-    
-    def calculate_cov(self, weight=None):
+        return np.average(self.chain_samples(), axis=0, weights=weight)
+
+    def parameter_cov(self, weight=None):
         """Calculate the covariance matrix of the parameters according to
-        the samples taken so far. Optionally, provide a weight array to 
+        the samples taken so far. Optionally, provide a weight array to
         weight the samples."""
-        return np.cov(self.get_samples(), rowvar=False, aweights=weight)
+        return np.cov(self.chain_samples(), rowvar=False, aweights=weight)

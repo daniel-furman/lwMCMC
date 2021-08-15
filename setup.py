@@ -20,7 +20,7 @@ setup(
     version="0.2",
     author="Daniel Ryan Furman",
     author_email="dryanfurman@gmail.com",
-    description=("Bayesian inference with MCMC parameter space sampling, with options to compare a from-scratch random walk NumPy implementation with the PyMC3 Hamiltonian approach."),
+    description=("A parameter space sampling class for lightweight Bayesian inference. Running on a NumPy-based implementation of the Metropolis-Hastings algorithm."),
     long_description="See documentation at https://github.com/daniel-furman/lwMCMC",
     license="MIT",
     keywords="bayesian-inference machine-learning statistical-modeling",

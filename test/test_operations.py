@@ -1,8 +1,7 @@
 # Module: lwMCMC
 # Author: Daniel Ryan Furman <dryanfurman@gmail.com>
 # License: MIT
-# Release: lwMCMC 0.2
-# Last modified : May 11 2021
+# Last modified : Aug 15 2021
 # Github: https://github.com/daniel-furman/lwMCMC
 
 import numpy as np
